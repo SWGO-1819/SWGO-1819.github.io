@@ -6,9 +6,9 @@
 ### Hero [ hero-image ]
 hero:
   image: "assets/img/profile.png"
-  image_alt: "이태원"
+  image_alt: "고승원"
   before_title: "환영합니다, <b>제 이름은</b>"
-  title: "<b>Taewon</b> Lee"
+  title: "<b>승원</b> 고"
   after_title: "I am <strong>Cyber Security Professional</strong>"
   description: "폴리텍 대학 강서캠퍼스 사이버 보안과 2학년 입니다."
   button1:
