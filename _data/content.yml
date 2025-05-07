@@ -5,7 +5,7 @@
 
 ### Hero [ hero-image ]
 hero:
-  image: "assets/img/test.png"
+  image: "assets/img/profile.png"
   image_alt: "고승원"
   before_title: "환영합니다, <b>제 이름은</b>"
   title: "<b>승원</b> 고"
@@ -72,30 +72,30 @@ skills:
     items:
       - label: "C/C++" #0-10 progress in dots
         text: "C언어 DPS, BPS까지 완료."
-        value: "85" #0-100 progress in %
+        value: "80" #0-100 progress in %
 
       - label: "Python" #0-10 progress in dots
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        value: "75" #0-100 progress in %
+        text: "python으로 현재 음성 암호화 프로젝트 제작 진행 중"
+        value: "95" #0-100 progress in %
 
   column2:
     items:
-      - label: "JavaScript" #0-10 progress in dots
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        value: "75" #0-100 progress in %
+      - label: "Java" #0-10 progress in dots
+        text: "자바로 디코봇 제작했음."
+        value: "80" #0-100 progress in %
 
-      - label: "React" #0-10 progress in dots
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      - label: "JSP" #0-10 progress in dots
+        text: "JSP로 웹 제작 가능."
         value: "70" #0-100 progress in %
 
   column3:
     items:
-      - label: "WordPress" #0-10 progress in dots
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      - label: "MySQL" #0-10 progress in dots
+        text: "MySQL과 JSP 연동해 웹 제작 가능"
         value: "90" #0-100 progress in %
 
-      - label: "Adobe XD" #0-10 progress in dots
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      - label: "C#" #0-10 progress in dots
+        text: "C#으로 회사에서 유지보수 업무한 이력있음."
         value: "80" #0-100 progress in %
 
 ### Resume [ resume ]
