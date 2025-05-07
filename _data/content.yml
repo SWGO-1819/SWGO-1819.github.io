@@ -5,7 +5,7 @@
 
 ### Hero [ hero-image ]
 hero:
-  image: "assets/img/profile.png"
+  image: "assets/img/test.png"
   image_alt: "고승원"
   before_title: "환영합니다, <b>제 이름은</b>"
   title: "<b>승원</b> 고"
@@ -64,14 +64,14 @@ services:
 
 ### Skills [ skills ]
 skills:
-  title: "Professional Skills"
+  title: "개발 스킬"
   subtitle: "my <b>Talent</b>"
-  bg_title: "Skills"
+  bg_title: "스킬"
 
   column1:
     items:
-      - label: "PHP" #0-10 progress in dots
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      - label: "C/C++" #0-10 progress in dots
+        text: "C언어 DPS, BPS까지 완료."
         value: "85" #0-100 progress in %
 
       - label: "Python" #0-10 progress in dots
