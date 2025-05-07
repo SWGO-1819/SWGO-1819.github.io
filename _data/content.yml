@@ -27,39 +27,21 @@ hero:
 
 ### Services [ services ]
 services:
-  title: "What I Do"
+  title: "할 수 있는 것"
   subtitle: "my <b>Services</b>"
   bg_title: "Services"
 
   items:
-    - title: "Web Design &amp; Logo"
-      subtitle: "Web Development"
-      text: "Web designers craft the overall vision &amp; plan for a website layout. Professional logo development: Business, Company, or Personal."
-      button_label: "See Pricing"
+    - title: "Web 제작"
+      subtitle: "Web 제작"
+      text: "js, jsp과 mysql등 연동해 웹제작"
+      button_label: "더보기"
       button_link: "#pricing-section"
 
-    - title: "iOS &amp; Android"
-      subtitle: "Apps Development"
-      text: "Design Software applications to run on mobile devices. Modern and mobile-ready application that will help you reach all of your marketing."
-      button_label: "See Pricing"
-      button_link: "#pricing-section"
-
-    - title: "Unity &amp; Unreal Engine"
-      subtitle: "Game Development"
-      text: "Creating games &amp; describes the design, development and release of a game. Developing unique mobile android and ios games."
-      button_label: "See Pricing"
-      button_link: "#pricing-section"
-
-    - title: "Google Ads"
-      subtitle: "Advertising"
-      text: "Advertising services include: Google search result pages, gmails, YouTube and other websites participated in Google Ads program."
-      button_label: "See Pricing"
-      button_link: "#pricing-section"
-
-    - title: "Sound Track"
-      subtitle: "Music Writing"
-      text: "Music copying, writing, creating, transcription and composition services."
-      button_label: "See Pricing"
+    - title: "Apps 개발"
+      subtitle: "Apps 개발"
+      text: "디코 봇, 실시간 음성 암호화 제작"
+      button_label: "더보기"
       button_link: "#pricing-section"
 
 ### Skills [ skills ]
@@ -107,7 +89,7 @@ resume:
   education:
     title: "Education"
     items:
-      - name: "CoderHouse Courses"
+      - name: "이젬코(주)"
         subname: "Backend Programming"
         period: "2014 - 2016"
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
