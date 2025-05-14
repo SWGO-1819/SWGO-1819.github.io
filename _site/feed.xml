@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-12-29T13:46:40+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luique - CV Resume &amp;amp; Personal Portfolio Jekyll Theme</title><subtitle>Jekyll Resume / CV / vCard / Portfolio and Personal Portfolio by bslthemes</subtitle><author><name>Admin</name></author><entry><title type="html">By spite about do of do allow</title><link href="http://localhost:4000/music/2020/08/05/by-spite-about/" rel="alternate" type="text/html" title="By spite about do of do allow" /><published>2020-08-05T00:00:00+03:00</published><updated>2020-08-05T00:00:00+03:00</updated><id>http://localhost:4000/music/2020/08/05/by-spite-about</id><content type="html" xml:base="http://localhost:4000/music/2020/08/05/by-spite-about/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-14T14:18:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Luique - CV Resume &amp;amp; Personal Portfolio Jekyll Theme</title><subtitle>Jekyll Resume / CV / vCard / Portfolio and Personal Portfolio by bslthemes</subtitle><author><name>Luique</name></author><entry><title type="html">SKT 유심 정보 유출</title><link href="http://localhost:4000/security/2025/05/14/by-spite-about/" rel="alternate" type="text/html" title="SKT 유심 정보 유출" /><published>2025-05-14T00:00:00+09:00</published><updated>2025-05-14T00:00:00+09:00</updated><id>http://localhost:4000/security/2025/05/14/by-spite-about</id><content type="html" xml:base="http://localhost:4000/security/2025/05/14/by-spite-about/"><![CDATA[<h1 id="사고개요">사고개요</h1>
+
+<p>2025년 4월 22일 SK텔레콤의 HSS에서 백도어코드로 가입자의 유심 정보가 대량 유출된 사태다. 악성코드인 BPFdoor의 백도어 공격으로 정보가 유출된 것으로 보인다.
+뒤의 설명은 LTE와 5G의 구조 및 BPF 구조 분석이다.</p>
+
+<p>Telcoware구성도</p>
+<h3 id="lte-시스템-구조-">LTE 시스템 구조 :</h3>
+<p>UE(단말기)	LTE chip을 내장하고 있어 LTE망에 붙을 수 있는 단말기<br />
+eNB(Evolved Node B)	무선 연결은 UE와 eNB간이고, 나머지는 유선 연결.<br />
+“LTE 기지국”이라 불리며 무선 연결을 제공하는 장비.<br />
+S-GW(Serving Gateway)	핸드오버 게이드 웨이, eNB1에 붙어서 인터넷을 사용하던 UE가 이동해 eNB1과 접속을 해지하고 eNB2와 접속을 하는 경우 S-GW가 역할 수행.<br />
+P-GW(Packet Data NetworkGateway)	PDN 연동 게이트웨이, 단말에 IP 할당<br />
+PDN(Packet Data Network)	인터넷 망<br />
+MME(Mobility Management Entity)	eNB와 S-GW간의 신호 제어를 담당하고 단말로부터 인입되는 데이터를 어느 곳으로 라우팅할지 결정<br />
+HSS(Home Subscriber Server)	각 UE별로 인증을 위한 Key 정보와 가입자 프로파일을 가지고 있는 LTE망의 중앙 DB<br />
+PCPF(Policy and Charging Rule Function)	UE별로 정책과 과금에 대한 룰을 정하는 장비<br />
+SPR(Subscriber Profile Repository)	UE별 Policy 및 Charging 룰은 PCRF에 저장되어 있지않고 여기에 저장<br />
+OFCS(Offline Charging System)	P-GW가 전달해 주는 CDR을 받아 중앙에서 관리하는 장비<br />
+OCS(Online Charging System)	우리나라의 경우 후불제가 일반적이지만, 선불제를 사용하고 있는 해외 통신사업자<br /></p>
+
+<p>Telcoware구성도</p>
+<h3 id="5g-구성도-">5G 구성도 :</h3>
+<p>NG-RAN(Radio Access Network)는 UE와 eNB로 구성되어 있으며, 위의 LTE와 같이 구성되어 있다.
+5G코어망은 5GC, NGC라고 불리며, 위는 데이터의 효율적인 전송에 관심 있다면, 여기는 제어하는 것을 중점적으로 다룬다. 크게 두가지로 분류하자면, 전체적인 제어를 담당하는 Control Plane과 데이터 패킷의 전송을 담당하는 User Plane다. CP는 UE의 인증, 이동성지원, UPF관리 등 수행하고, UP는 주로 패킷의 실제 라우팅 및 포워드 담당을 수행한다.
+5G과 4G네트워크의 차이 :<br />
+<strong>1.	RAN의 고주파, 광대역화</strong><br />
+광대역이란 말은 위의 Air interface에 사용하는 주파수의 대역폭이 넓다는 의미입니다. LTE에서는 위의 표에서 제한이 되어있지만, 5G에선 이것의 약 20배 달하는 397.4 MHz의 대역을 사용 가능하다.
+    하지만 이 광대역이 할당된 Carrier 주파수가 고주파 대역이므로, 여러 물리적인 상황과 맞춰 5G 네트워크의 구조도 달라진다. 고주파의 특성으로 음영지역이 다수 발생하게 되고, 따라서 더 촘촘한 5G 기지국이 설치되어야 한다.
+<strong>2.	본격적인 코어의 분리 및 유닛의 재배치</strong><br />
+4G에서도 코어의 분리는 있었지만 본격적으로 코어를 나눈 건 5G부터다. MEC기반의 서버 가상화 입니다. MEC(Moblie Edge Computing)를 이용해 사용자 근접의 유저 데이터 서비스를 제공하기 위해서는 코어를 전진배치해야한다.
+이때 모든 기능을 전진 배치하는 것은 현실적으로 무리가 있다. 4G에서도 실제 코어국사는 딱 두곳(구로, 혜화)이기 때문이다. 따라서 유저 데이터를 담당하는 UP를 전진 배치하고, CP는 코어국사에 위치 시키도록 하기위해 본격적인 코어의 분리가 진행되었다.
+한국 SKT 같은 경우 5G가 4G를 감싸는 형태로, 같은 기지국, 코어망을 그대로 활용하는 NSA방식을 채택해 제어는 LTE가 하는 형태가 된다. 그래서 가끔씩 5g가 꺼지면 LTE로 변화하는 것도 이 때문이다.
+해당 구조로 인해 5G나 4G나 접근하는 데는 차이가 없어 5G나 4G차이 없이 둘 다 위험할 가능성이 있다.
+하지만 HSS같은 경우 통신망 내부에 위치해 있기 때문에 외부에서 접근하기엔 어려움이 있다.<br />
+유심 정보 종류 :<br />
+IMEI(International Mobile Equipment Identity) : 국제 모바일 기기 식별 15자리, 제조사/ 모델/일련번호 등의 정보를 포함, 듀얼 sim의 경우 sim 슬롯마다 서로 다른 IMEI가 부여한다.<br />
+| AA-BBBBBB-CCCCCC-D |  <br />
+AA: 인증기관 고유 번호  <br />
+BBBBBB: 단말기 제조사/모델명  <br />
+CCCCCC: 단말기 일련번호  <br />
+D: 체크섬 숫자<br />
+IMSI(Universal Subscriber Identity Modul) : 국제 이동 통신 시스템, 서비스 가입 시 휴대용 모바일 단말기에 할당되는 15자리 고유 식별 번호, 모바일 네트워크에서 사용자를 구별하는데 사용되며 전 세계 설룰러 네트워크에서 사용되는 유일한 구분자다.<br />
+구조는 MCC(Mobile Country Code)+MNC(Mobile Network code),+MSIN(Mobile Subscription Identification Number)로 되어있는데 MCC는 모바일 국가 코드 세자리, MNC는 모바일 네트워크 코드 두자리, 전화번호 10자리로 되어있으며, 전화번호에서 추출될 수 는 있지만, 항상 동일한 것은 아니다. 휴대폰 번호를 바꾸더라도 번호는 유지된다.
+현재 유출 가능성이 있는 정보는 IMSI, ICCID, 유심 인증키, 가입자 전화번호 4종의 유심 정보와 21종의 유심 정보 처리 등에 필요한 회사 내부 관리용 정보가 털린 것으로 확인되었고, IMEI가 털린 정황은 없는 것으로 보인다. <br /></p>
+
+<h2 id="bpfdoor">BPFDoor</h2>
+<p>BPF는 Berkeley Packet Filter의 약자로 원래는 네트워크 트래픽을 분석해야 하는 프로그램을 위해 특정 OS에서 사용되는 기술이다. 이 기술을 응용하여 커널에서 특정 패킷을 가로채 쉘 권한을 획득하는 방식의 악성코드다.<br />
+아래는 유출 원인이 된 BPFDoor 백도어 프로그램의 기본 구조다.<br />
+Github에 올라와있는 코드 기준으로 분석했다.<br /></p>
+
+<h3 id="packet_loop함수-">Packet_loop함수 :</h3>
+<p>기능 : socket생성 후 Magic Packet을 이용해 특정 조건을 만족하는 패킷들만 감청.
+Magit packet은 WoL(Wake-on-Lan)이라는 원격으로 부팅하는 기술에서 사용되는 패킷이다. WoL을 사용하면 PC가 종료한 상태에서도 신호를 감지하고 있다가 특정 패킷일 들어오면 컴퓨터를 부팅 시켜주는 기술이다</p>
+
+<p>SO_ATTACH_FILTER를 옵션에 넣어 커널에 보내고 BPF옵션 설정 가능.</p>
+
+<p>bpf_code 변수는 code, jump ture, jump false, 다용도 필드 순으로 이루어져 있고 해당 코드가 ture일 경우 jump하는 구간과 아닐 경우 jump하는 구간을 설정해놓는데, 해당 코드는 특정 포트(29269,21139)의 패킷만 허용하고 나머지를 차단하는 구성으로 되어있다. BPF의 큰 특징으로, 사용자가 원하는 패킷만 허용하고 나머지는 reject하는 방식을 이용해 감지를 못하도록 만든게 특징이다.</p>
+
+<p>필터링된 패킷을 프로토콜 별로 타입 결정.</p>
+
+<p>Mp(Magic packet)생성 성공 후 프로세스 생성하고 해당 mp의 인증 처리(rc4로 암호화된 내용 복구)</p>
+
+<p>위의 결과에 따라</p>
+
+<p><strong>1.	Shell로 가는 포트를 포워딩 시키는 방식</strong><br />
+<strong>0.	리버스 shell 방식으로, 공격자에게 피해자가 열어주는 방식</strong><br />
+<strong>2.	인증 실패로 인한 ack 반환</strong><br />
+로 나뉜다.<br />
+##b함수 : <br />
+기능 : 사용 가능한 포트 탐색 후 소켓 생성<br /></p>
+
+<h3 id="w함수--">w함수 : <br /></h3>
+<p>기능 : 사용 가능한 포트 탐색 후 소켓 생성<br /></p>
+
+<h3 id="getshell-함수-">Getshell 함수 :<br /></h3>
+<p>기능 : b, w 함수를 통해 소켓 포트 생성 후 해당 포트로 리다이렉션 되도록 만듬.<br /></p>
+
+<p>공격자 포트에서 선별한 포트로 리다이렉트하는 구문을 실행시키는 것을 확인 할 수 있다<br />
+위를 통해 Magic Packet이 감지되면 그때 소켓을 생성하는 방식으로 작동.<br />
+이 코드가 실행되더라도, 공격자가 특정 포트로 보낸 코드가 오지 않는다면 작동하지 않아 감지하기 어려운 특징인 코드다.<br />
+##사고 원인
+HSS 시스템에 칩입한 해커의 악성코드로 가입자들의 유심 정보가 털렸다. 해당 수법은 중국 해커 그룹이 주로 사용하는 BPFDoor라는 백도어 해킹 수법이 사용된 것으로 파악됐다. 평소에는 해당 모듈이 통신 흔적 없이 조용히 있다가 특정 패킷이 들어오면 프로세스가 활성화되어, outbound로 통신 포트를 열게 된다. 백도어에서 명령어를 수행하고 정보를 보내 탈취하게 된다. 백도어는 서버에서 깔려 있을 때 안에서 공격자에게 패킷을 보내고 다시 공격자는 그 패킷에 대한 응답을 하면서 연결 유지를 통해 데이터를 빼가는 형식이다. 어떠한 경로로든 HSS에 악성 코드가 설치가 된 후 실행이 되었고, BPF 코드 특성상 네트워크 상의 탐지로는 탐지가 어렵기 때문에 유출을 늦게 확인된 것으로 보인다.</p>
+
+<h3 id="kisa-보호나라-보안공지">kisa 보호나라 보안공지</h3>
+<p>Kisa 보호나라 보안공지에서 해당 ip의 접근이나, 파일들이 확인이 되면 보호나라를 통해 침해 사고를 즉시 신고해달라고 공지를 올렸다.</p>
+
+<h2 id="사후대응방안">사후대응방안</h2>
+<p>일단 SKT에선 USI 재발급을 통해 복제되는 유심에 대해 피해를 방지하고, 유심 보호 서비스를 이용해 해당 유심이 복제가 되었을 때 피해를 방지하고, 피해가 왔을 때 요구할 수 있도록 해야 한다. 만약 IMEI가 털렸을 경우 같은 단말기를 썼을 경우 털릴 가능성이 존재하지만 IMEI가 털린 정황은 보이지 않기에 유심 보호 서비스만으로 안전해질 가능성이 있다. 또한 kisa 보호나라에서는 관련 사칭 피싱을 조심하라고 공지하였다.  2차 피해로 생기는 예방 방법은 공식 채널 외 검색했을 때 출처가 불분명한 사이트 주소는 클릭 금지하거나, 앱 다운로드 유도 시 보호나라(카카오톡 채널) 내 스미싱 확인 서비스를 이용하여 신고 및 악성 여부를 판별하라고 공지하였다. 그리고 재부팅 같은 피싱 메시지가 왔을 경우 재부팅 시 복제된 폰으로 통신 권한이 넘어가기에 재부팅을 하지 않는 것이 좋다.##</p>
+<h2 id="예상되는-피해-시나리오">예상되는 피해 시나리오</h2>
+<p>민감한 개인 정보가 털리지 않았기에 금융 정보나, 다른 개인 정보에 접근하는 것이 쉽지 않기에 만약 복제 폰으로 권한이 넘어간다면, 피싱 등으로 인한 2차 피해가 일어날 가능성이 높다.
+Kisa 보호나라 에서는 이런 사회적 이슈를 이용한 피싱 사례가 발견되어 공지를 올렸다.
+유심 무상 교체 관련 검색 결과 노출되는 사이트가 도박 사이트로 연결되는 등 피싱을 당한 사례가 생기고 있다.
+또한 유심 보호 서비스를 받지 않는다면, 유심 복제를 통한 사기로 피해자 및 주변 관련자의 피해는 오로지 피해자가 감당을 해야 한다.
+사전 예방 방안
+BPF코드를 해석해 보았을 때, BPF 방식으로 작동하는 패킷을 감지하는 방식을 추가할 필요가 있고, 사전에 이런 일을 방지하기 위해 관리자가 뭔가를 설치할 때 주의를 하는 방법이나 실행 파일을 관리자 권한으로 실행하지 않도록 하는 등원인을 제거하는 것이 가장 적절하다.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Ryan'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Ryan' to STDOUT.</span>
+</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Security" /><category term="rock" /><summary type="html"><![CDATA[사고개요]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/SKT.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/SKT.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Two Before Arrow Not Relied</title><link href="http://localhost:4000/design/2020/07/20/two-before-arrow/" rel="alternate" type="text/html" title="Two Before Arrow Not Relied" /><published>2020-07-20T00:00:00+09:00</published><updated>2020-07-20T00:00:00+09:00</updated><id>http://localhost:4000/design/2020/07/20/two-before-arrow</id><content type="html" xml:base="http://localhost:4000/design/2020/07/20/two-before-arrow/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
 
 <p>Forfeited you engrossed but gay sometimes explained. Another as studied it to evident. Merry sense given he be arise. Conduct at an replied removal an amongst. Remaining determine few her two cordially admitting old.</p>
 
@@ -21,7 +122,7 @@
 <span class="k">end</span>
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Ryan'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Ryan' to STDOUT.</span>
-</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Music" /><category term="rock" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog9.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog9.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Two Before Arrow Not Relied</title><link href="http://localhost:4000/design/2020/07/20/two-before-arrow/" rel="alternate" type="text/html" title="Two Before Arrow Not Relied" /><published>2020-07-20T00:00:00+03:00</published><updated>2020-07-20T00:00:00+03:00</updated><id>http://localhost:4000/design/2020/07/20/two-before-arrow</id><content type="html" xml:base="http://localhost:4000/design/2020/07/20/two-before-arrow/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
+</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Design" /><category term="code" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog8.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog8.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Design in Mobile Application</title><link href="http://localhost:4000/mobile/2020/07/05/design-in-mobile/" rel="alternate" type="text/html" title="Design in Mobile Application" /><published>2020-07-05T00:00:00+09:00</published><updated>2020-07-05T00:00:00+09:00</updated><id>http://localhost:4000/mobile/2020/07/05/design-in-mobile</id><content type="html" xml:base="http://localhost:4000/mobile/2020/07/05/design-in-mobile/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
 
 <p>Forfeited you engrossed but gay sometimes explained. Another as studied it to evident. Merry sense given he be arise. Conduct at an replied removal an amongst. Remaining determine few her two cordially admitting old.</p>
 
@@ -44,30 +145,7 @@
 <span class="k">end</span>
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Ryan'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Ryan' to STDOUT.</span>
-</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Design" /><category term="code" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog8.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog8.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Design in Mobile Application</title><link href="http://localhost:4000/mobile/2020/07/05/design-in-mobile/" rel="alternate" type="text/html" title="Design in Mobile Application" /><published>2020-07-05T00:00:00+03:00</published><updated>2020-07-05T00:00:00+03:00</updated><id>http://localhost:4000/mobile/2020/07/05/design-in-mobile</id><content type="html" xml:base="http://localhost:4000/mobile/2020/07/05/design-in-mobile/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
-
-<p>Forfeited you engrossed but gay sometimes explained. Another as studied it to evident. Merry sense given he be arise. Conduct at an replied removal an amongst. Remaining determine few her two cordially admitting old.</p>
-
-<blockquote>
-  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque suscipit.</p>
-</blockquote>
-
-<p>Tiled say decay spoil now walls meant house. My mr interest thoughts screened of outweigh removing. Evening society musical besides inhabit ye my. Lose hill well up will he over on. Increasing <a href="#">link</a> sufficient everything men him admiration unpleasing .</p>
-
-<ul>
-  <li>Greatest properly off ham exercise all.</li>
-  <li>Unsatiable invitation its possession nor off.</li>
-  <li>All difficulty estimating unreserved increasing the solicitude.</li>
-</ul>
-
-<p>Unpleasant astonished an diminution up partiality. Noisy an their of meant. Death means up civil do an offer wound of.</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Ryan'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Ryan' to STDOUT.</span>
-</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Mobile" /><category term="app" /><category term="mobile" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog-2.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">By spite about what to do</title><link href="http://localhost:4000/design/2020/06/15/by-spite-what/" rel="alternate" type="text/html" title="By spite about what to do" /><published>2020-06-15T00:00:00+03:00</published><updated>2020-06-15T00:00:00+03:00</updated><id>http://localhost:4000/design/2020/06/15/by-spite-what</id><content type="html" xml:base="http://localhost:4000/design/2020/06/15/by-spite-what/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
+</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Mobile" /><category term="app" /><category term="mobile" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog-2.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog-2.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">By spite about what to do</title><link href="http://localhost:4000/design/2020/06/15/by-spite-what/" rel="alternate" type="text/html" title="By spite about what to do" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>http://localhost:4000/design/2020/06/15/by-spite-what</id><content type="html" xml:base="http://localhost:4000/design/2020/06/15/by-spite-what/"><![CDATA[<p>So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.</p>
 
 <p>Forfeited you engrossed but gay sometimes explained. Another as studied it to evident. Merry sense given he be arise. Conduct at an replied removal an amongst. Remaining determine few her two cordially admitting old.</p>
 
@@ -90,9 +168,9 @@
 <span class="k">end</span>
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Ryan'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Ryan' to STDOUT.</span>
-</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Design" /><category term="Jekyll" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog6.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/video/music/2020/01/08/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-01-08T00:00:00+02:00</published><updated>2020-01-08T00:00:00+02:00</updated><id>http://localhost:4000/video/music/2020/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/video/music/2020/01/08/welcome-to-jekyll/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in <a href="https://jekyllrb.com/docs/usage/">many different ways</a>, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+</code></pre></div></div>]]></content><author><name>Ryan Adlard</name></author><category term="Design" /><category term="Jekyll" /><summary type="html"><![CDATA[So striking at of to welcomed resolved. Northward by described up household therefore attention. Excellence decisively nay man yet impression for contrasted remarkably.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/blog6.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/blog6.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/video/music/2020/01/08/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-01-08T00:00:00+09:00</published><updated>2020-01-08T00:00:00+09:00</updated><id>http://localhost:4000/video/music/2020/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/video/music/2020/01/08/welcome-to-jekyll/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in <a href="https://jekyllrb.com/docs/usage/">many different ways</a>, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code><sup id="fnref:posts" role="doc-noteref"><a href="#fn:posts" class="footnote" rel="footnote">1</a></sup> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code><sup id="fnref:posts"><a href="#fn:posts" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
 
 <p>Jekyll also offers powerful support for code snippets:</p>
 
@@ -107,7 +185,7 @@
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:posts" role="doc-endnote">
+    <li id="fn:posts">
       <p>Footnote test. <a href="#fnref:posts" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
