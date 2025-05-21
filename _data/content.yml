@@ -247,6 +247,3 @@ portfolio:
   button:
     link: "works/"
     label: "View More"
-# disqus 댓글
-#disqus_comments: "yes" # yes - 댓글 표시, no - 댓글 숨김
-#disqus_shortname: "your-disqus-shortname" # 등록한 Disqus 숏네임
