@@ -4,7 +4,7 @@
       "title"    : "SKT 유심 정보 유출",
       "category" : "Security",
       "tags"     : "rock",
-      "url"      : "/security/2025/05/14/by-spite-about/",
+      "url"      : "/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C/",
       "date"     : "2025-05-14 00:00:00 +0900"
     } ,
   
@@ -14,30 +14,6 @@
       "tags"     : "code",
       "url"      : "/design/2020/07/20/two-before-arrow/",
       "date"     : "2020-07-20 00:00:00 +0900"
-    } ,
-  
-    {
-      "title"    : "Design in Mobile Application",
-      "category" : "Mobile",
-      "tags"     : "app, mobile",
-      "url"      : "/mobile/2020/07/05/design-in-mobile/",
-      "date"     : "2020-07-05 00:00:00 +0900"
-    } ,
-  
-    {
-      "title"    : "By spite about what to do",
-      "category" : "Design",
-      "tags"     : "Jekyll",
-      "url"      : "/design/2020/06/15/by-spite-what/",
-      "date"     : "2020-06-15 00:00:00 +0900"
-    } ,
-  
-    {
-      "title"    : "Welcome to Jekyll!",
-      "category" : "VideoMusic",
-      "tags"     : "Jekyll",
-      "url"      : "/video/music/2020/01/08/welcome-to-jekyll/",
-      "date"     : "2020-01-08 00:00:00 +0900"
     } 
   
 ]

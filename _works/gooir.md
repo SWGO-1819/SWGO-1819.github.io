@@ -2,8 +2,8 @@
 # preview details
 layout: works-single
 title: Gooir
-category: UI UX Design
-category_slug: ui-ux-design
+category: Development
+category_slug: development
 image: assets/img/works/work4.jpeg
 short_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
