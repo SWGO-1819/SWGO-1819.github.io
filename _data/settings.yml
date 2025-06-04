@@ -10,45 +10,25 @@ settings:
 preloader:
   logo:
     image: "assets/img/logo2.png"
-    alt: "Zoé Miller"
+    alt: "koseungwon"
 
 ### Header
 header:
   logo:
     image: "assets/img/logo2.png"
-    alt: "Zoé Miller"
+    alt: "koseungwon"
 
 ### Social
 social:
-  - title: "Twitter"
-    icon: "fab fa-twitter"
-    url: "http://twitter.com"
-
-  - title: "Dribbble"
-    icon: "fab fa-dribbble"
-    url: "http://dribbble.com"
-
-  - title: "Behance"
-    icon: "fab fa-behance"
-    url: "http://behance.com"
 
 ### Footer
 footer:
   developer: "Developed by <strong>bslthemes</strong>"
-  copyright: "<strong>Luique</strong>. All rights reserved"
+  copyright: "<strong>koseungwon</strong>. All rights reserved"
 
 ### Portfolio Filters Settings
 portfolio:
   layout: "list" # select works layout options: "Grid" or "List"
   filters:
-    - name: "UI UX Design"
-      slug: "ui-ux-design"
-
-    - name: "Photography"
-      slug: "photography"
-
     - name: "Development"
       slug: "development"
-
-    - name: "Branding"
-      slug: "branding"
