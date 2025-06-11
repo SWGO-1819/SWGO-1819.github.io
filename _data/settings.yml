@@ -4,7 +4,7 @@
 
 ### Main Settings
 settings:
-  skin: "light" # select initial skin option: "light" or "dark"
+  skin: "dark" # select initial skin option: "light" or "dark"
 
 ### Preloader
 preloader:
@@ -23,7 +23,7 @@ social:
 
 ### Footer
 footer:
-  developer: "Developed by <strong>bslthemes</strong>"
+  developer: "Developed by <strong>koseungwon</strong>"
   copyright: "<strong>koseungwon</strong>. All rights reserved"
 
 ### Portfolio Filters Settings

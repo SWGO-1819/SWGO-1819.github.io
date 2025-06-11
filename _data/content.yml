@@ -12,7 +12,7 @@ hero:
   after_title: "I am <strong>Cyber Security Professional</strong>"
   description: "폴리텍 대학 강서캠퍼스 사이버 보안과 2학년 입니다."
   button1:
-    label: "이력서 다운받기"
+    label: "github 바로가기"
     link: "https://github.com/SWGO-1819"
   button2:
     label: "My Skills"
@@ -225,19 +225,19 @@ contacts:
   list:
     - label: "Address"
       icon: "far fa-map"
-      text: "North Tower, Toronto, Canada"
+      text: "Guro-gu, Seoul, South Korea"
 
-    - label: "Freelance"
+    - label: "Job"
       icon: "far fa-user"
-      text: "Available Right Now"
+      text: "Student majoring in CyberSecurity"
 
     - label: "Email"
       icon: "far fa-envelope"
-      text: "zoe.miller@mydomain.com"
+      text: "tonytony1714@gmail.com"
 
     - label: "Phone"
       icon: "far fa-address-book"
-      text: "+1 900 - 900 - 9000"
+      text: "+82 010 - 2*** - 9***"
 
 ### Portfolio [ portfolio ]
 #items generates from dir /_works/*
