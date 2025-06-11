@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  DreamHack문제-rev-basic-2
-date:   2020-07-20
-category: Design
+date:   2025-06-11
+category: code
 image: assets/img/blog/revcode.png
 author: Ryan Adlard
 tags: code

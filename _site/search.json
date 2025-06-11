@@ -1,19 +1,19 @@
 [
   
     {
+      "title"    : "DreamHack문제-rev-basic-2",
+      "category" : "code",
+      "tags"     : "code",
+      "url"      : "/code/2025/06/11/Dreamhack_rev-basic-2/",
+      "date"     : "2025-06-11 00:00:00 +0900"
+    } ,
+  
+    {
       "title"    : "SKT 유심 정보 유출",
       "category" : "Security",
       "tags"     : "rock",
       "url"      : "/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C/",
       "date"     : "2025-05-14 00:00:00 +0900"
-    } ,
-  
-    {
-      "title"    : "DreamHack문제-rev-basic-2",
-      "category" : "Design",
-      "tags"     : "code",
-      "url"      : "/design/2020/07/20/Dreamhack_rev-basic-2/",
-      "date"     : "2020-07-20 00:00:00 +0900"
     } 
   
 ]

@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-11T13:59:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ko’s BLOG</title><subtitle>CyberSecurity BLOG</subtitle><author><name>Luique</name></author><entry><title type="html">SKT 유심 정보 유출</title><link href="http://localhost:4000/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C/" rel="alternate" type="text/html" title="SKT 유심 정보 유출" /><published>2025-05-14T00:00:00+09:00</published><updated>2025-05-14T00:00:00+09:00</updated><id>http://localhost:4000/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C/"><![CDATA[<h1 id="사고개요">사고개요</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-11T14:10:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ko’s BLOG</title><subtitle>CyberSecurity BLOG</subtitle><author><name>Luique</name></author><entry><title type="html">DreamHack문제-rev-basic-2</title><link href="http://localhost:4000/code/2025/06/11/Dreamhack_rev-basic-2/" rel="alternate" type="text/html" title="DreamHack문제-rev-basic-2" /><published>2025-06-11T00:00:00+09:00</published><updated>2025-06-11T00:00:00+09:00</updated><id>http://localhost:4000/code/2025/06/11/Dreamhack_rev-basic-2</id><content type="html" xml:base="http://localhost:4000/code/2025/06/11/Dreamhack_rev-basic-2/"><![CDATA[<h1 id="dream-hack-문제">Dream Hack 문제</h1>
+<h3 id="rev-basic-2">rev-basic-2</h3>
+<p>Dream Hack 문제중 rev-basic-2 문제 풀이다.
+ida를 이용하여 코드를 봤을 경우, if문이 존재하고, if문을 통과 했을 경우 correct가 나온다.
+이를 통해 무엇을 입력해야 correct가 나오는지 알 수 있다.
+<br />
+<img src="/assets/img/blog/revcode.png" alt="Heartbeat Diagram" style="max-width: 100%; border-radius: 12px;" />
+<br />
+해당 문제 같은 경우 sub_140001000함수에 통과해야 true가 나오는 걸 확인 할 수 있다.
+<br />
+<img src="/assets/img/blog/revcode2.png" alt="Heartbeat Diagram" style="max-width: 100%; border-radius: 12px;" />
+<br />
+위의 사진은 sub_140001000함수의 사진이고, ac의 문자열과 같아야 통과할 수 있는 것을 확인 가능하다.
+이를 통해 ac의 문자열을 타고 들어가면 아래 사진처럼 해당 문자열이 뭔지 알 수 있게된다.
+<br />
+<img src="/assets/img/blog/revcode3.png" alt="Heartbeat Diagram" style="max-width: 100%; border-radius: 12px;" />
+<br />
+리버싱의 기초적인 문제인 만큼 제일 쉬운 난이도의 문제다.</p>
+<ul>
+  <li>ida로 코드 확인</li>
+  <li>if문을 타고 들어가서 조건 확인</li>
+  <li>조건의 문자열 확인 후 해당 문자열 작성</li>
+</ul>]]></content><author><name>Ryan Adlard</name></author><category term="code" /><category term="code" /><summary type="html"><![CDATA[Dream Hack 문제 rev-basic-2 Dream Hack 문제중 rev-basic-2 문제 풀이다. ida를 이용하여 코드를 봤을 경우, if문이 존재하고, if문을 통과 했을 경우 correct가 나온다. 이를 통해 무엇을 입력해야 correct가 나오는지 알 수 있다. 해당 문제 같은 경우 sub_140001000함수에 통과해야 true가 나오는 걸 확인 할 수 있다. 위의 사진은 sub_140001000함수의 사진이고, ac의 문자열과 같아야 통과할 수 있는 것을 확인 가능하다. 이를 통해 ac의 문자열을 타고 들어가면 아래 사진처럼 해당 문자열이 뭔지 알 수 있게된다. 리버싱의 기초적인 문제인 만큼 제일 쉬운 난이도의 문제다. ida로 코드 확인 if문을 타고 들어가서 조건 확인 조건의 문자열 확인 후 해당 문자열 작성]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/revcode.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/revcode.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SKT 유심 정보 유출</title><link href="http://localhost:4000/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C/" rel="alternate" type="text/html" title="SKT 유심 정보 유출" /><published>2025-05-14T00:00:00+09:00</published><updated>2025-05-14T00:00:00+09:00</updated><id>http://localhost:4000/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/security/2025/05/14/SKT%ED%95%B4%ED%82%B9%EC%82%AC%EA%B3%A0%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C/"><![CDATA[<h1 id="사고개요">사고개요</h1>
 
 <p>2025년 4월 22일 SK텔레콤의 HSS에서 백도어코드로 가입자의 유심 정보가 대량 유출된 사태다. 악성코드인 BPFdoor의 백도어 공격으로 정보가 유출된 것으로 보인다.
 뒤의 설명은 LTE와 5G의 구조 및 BPF 구조 분석이다.</p>
@@ -347,26 +369,4 @@ Kisa 보호나라 에서는 이런 사회적 이슈를 이용한 피싱 사례�
 유심 무상 교체 관련 검색 결과 노출되는 사이트가 도박 사이트로 연결되는 등 피싱을 당한 사례가 생기고 있다.
 또한 유심 보호 서비스를 받지 않는다면, 유심 복제를 통한 사기로 피해자 및 주변 관련자의 피해는 오로지 피해자가 감당을 해야 한다.
 사전 예방 방안
-BPF코드를 해석해 보았을 때, BPF 방식으로 작동하는 패킷을 감지하는 방식을 추가할 필요가 있고, 사전에 이런 일을 방지하기 위해 관리자가 뭔가를 설치할 때 주의를 하는 방법이나 실행 파일을 관리자 권한으로 실행하지 않도록 하는 등원인을 제거하는 것이 가장 적절하다.</p>]]></content><author><name>Ryan Adlard</name></author><category term="Security" /><category term="rock" /><summary type="html"><![CDATA[사고개요]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/SKT.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/SKT.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">DreamHack문제-rev-basic-2</title><link href="http://localhost:4000/design/2020/07/20/Dreamhack_rev-basic-2/" rel="alternate" type="text/html" title="DreamHack문제-rev-basic-2" /><published>2020-07-20T00:00:00+09:00</published><updated>2020-07-20T00:00:00+09:00</updated><id>http://localhost:4000/design/2020/07/20/Dreamhack_rev-basic-2</id><content type="html" xml:base="http://localhost:4000/design/2020/07/20/Dreamhack_rev-basic-2/"><![CDATA[<h1 id="dream-hack-문제">Dream Hack 문제</h1>
-<h3 id="rev-basic-2">rev-basic-2</h3>
-<p>Dream Hack 문제중 rev-basic-2 문제 풀이다.
-ida를 이용하여 코드를 봤을 경우, if문이 존재하고, if문을 통과 했을 경우 correct가 나온다.
-이를 통해 무엇을 입력해야 correct가 나오는지 알 수 있다.
-<br />
-<img src="/assets/img/blog/revcode.png" alt="Heartbeat Diagram" style="max-width: 100%; border-radius: 12px;" />
-<br />
-해당 문제 같은 경우 sub_140001000함수에 통과해야 true가 나오는 걸 확인 할 수 있다.
-<br />
-<img src="/assets/img/blog/revcode2.png" alt="Heartbeat Diagram" style="max-width: 100%; border-radius: 12px;" />
-<br />
-위의 사진은 sub_140001000함수의 사진이고, ac의 문자열과 같아야 통과할 수 있는 것을 확인 가능하다.
-이를 통해 ac의 문자열을 타고 들어가면 아래 사진처럼 해당 문자열이 뭔지 알 수 있게된다.
-<br />
-<img src="/assets/img/blog/revcode3.png" alt="Heartbeat Diagram" style="max-width: 100%; border-radius: 12px;" />
-<br />
-리버싱의 기초적인 문제인 만큼 제일 쉬운 난이도의 문제다.</p>
-<ul>
-  <li>ida로 코드 확인</li>
-  <li>if문을 타고 들어가서 조건 확인</li>
-  <li>조건의 문자열 확인 후 해당 문자열 작성</li>
-</ul>]]></content><author><name>Ryan Adlard</name></author><category term="Design" /><category term="code" /><summary type="html"><![CDATA[Dream Hack 문제 rev-basic-2 Dream Hack 문제중 rev-basic-2 문제 풀이다. ida를 이용하여 코드를 봤을 경우, if문이 존재하고, if문을 통과 했을 경우 correct가 나온다. 이를 통해 무엇을 입력해야 correct가 나오는지 알 수 있다. 해당 문제 같은 경우 sub_140001000함수에 통과해야 true가 나오는 걸 확인 할 수 있다. 위의 사진은 sub_140001000함수의 사진이고, ac의 문자열과 같아야 통과할 수 있는 것을 확인 가능하다. 이를 통해 ac의 문자열을 타고 들어가면 아래 사진처럼 해당 문자열이 뭔지 알 수 있게된다. 리버싱의 기초적인 문제인 만큼 제일 쉬운 난이도의 문제다. ida로 코드 확인 if문을 타고 들어가서 조건 확인 조건의 문자열 확인 후 해당 문자열 작성]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/revcode.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/revcode.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+BPF코드를 해석해 보았을 때, BPF 방식으로 작동하는 패킷을 감지하는 방식을 추가할 필요가 있고, 사전에 이런 일을 방지하기 위해 관리자가 뭔가를 설치할 때 주의를 하는 방법이나 실행 파일을 관리자 권한으로 실행하지 않도록 하는 등원인을 제거하는 것이 가장 적절하다.</p>]]></content><author><name>Ryan Adlard</name></author><category term="Security" /><category term="rock" /><summary type="html"><![CDATA[사고개요]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/SKT.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/SKT.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
