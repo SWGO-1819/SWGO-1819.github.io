@@ -32,9 +32,9 @@ main:
     parent: 0
 
   # Testimonials
-  - title: "Testimonials"
-    url: "#testimonials-section"
-    parent: 0
+#  - title: "Testimonials"
+#    url: "#testimonials-section"
+#    parent: 0
 
   # Pricing
   - title: "Pricing"
